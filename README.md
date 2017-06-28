@@ -20,7 +20,7 @@ let policy2 = policyParser.fromFile(...)
 let policy3 = policyParser.fromString(...)
 ```
 
-For example how to format policy document see [json example file](https://github.com/jakubknejzlik/policy/blob/master/test/example.policy.json)
+For example how to format policy document see [json example file](https://github.com/jakubknejzlik/node-policy/blob/master/test/example.policy.json)
 
 # Example
 
