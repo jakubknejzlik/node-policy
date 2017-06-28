@@ -1,5 +1,5 @@
 const assert = require("assert");
-const policyicy = require("../").Policy;
+const Policy = require("../").Policy;
 
 describe("policy", () => {
   it("should validate simple rules", () => {
