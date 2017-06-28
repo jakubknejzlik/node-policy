@@ -1,4 +1,7 @@
 # policy
+
+[![Build Status](https://travis-ci.org/jakubknejzlik/node-policy.svg?branch=master)](https://travis-ci.org/jakubknejzlik/node-policy)
+
 Library for controlling access to resources with policy documents. Inspired by AWS IAM policies.
 
 # Installation
