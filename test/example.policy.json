@@ -1,0 +1,4 @@
+[
+  {"rule":"allow","participant":"*","resource":"*","action":"*"},
+  {"rule":"deny","participants":["john.doe"],"resources":["example"],"actions":["do-something"]}
+]

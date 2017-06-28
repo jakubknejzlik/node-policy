@@ -1,0 +1,24 @@
+{
+  "name": "policy",
+  "description": "Library for controlling access to resources with policy documents",
+  "version": "0.0.1",
+  "license": "MIT",
+  "keywords": [
+    "acl",
+    "policy",
+    "aws",
+    "iam",
+    "access",
+    "control"
+  ],
+  "devDependencies": {
+    "mocha": "^3.4.2"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jakubknejzlik/node-policy.git"
+  }
+}
