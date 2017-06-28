@@ -3,7 +3,7 @@ const Policy = require("../").Policy;
 
 describe("policy", () => {
   it("should validate simple rules", () => {
-    let policyicy = new Policy();
+    let policy = new Policy();
     policy.allow("customer", "cars", "buy");
     policy.allow("seller", "cars", "buy");
     policy.allow("seller", "cars", "sell");
@@ -17,7 +17,7 @@ describe("policy", () => {
   });
 
   it("should validate array of rules", () => {
-    let policyicy = new Policy();
+    let policy = new Policy();
     policy.allow("customer", "cars", ["buy"]);
     policy.allow("seller", ["cars", "vans"], ["buy", "sell"]);
 
@@ -31,7 +31,7 @@ describe("policy", () => {
   });
 
   it("should validate wildcards rules", () => {
-    let policyicy = new Policy();
+    let policy = new Policy();
 
     policy.allow("seller", ["cars"], "*");
     policy.allow("seller", ["vans"], "hit-with-*");
@@ -44,7 +44,7 @@ describe("policy", () => {
   });
 
   it("should validate allow all", () => {
-    let policyicy = new Policy();
+    let policy = new Policy();
 
     policy.allow("*", "*", "*");
 
@@ -52,7 +52,7 @@ describe("policy", () => {
   });
 
   it("should validate allow all with prefixes", () => {
-    let policyicy = new Policy();
+    let policy = new Policy();
 
     policy.allow("a_*", "b_*", "c_*");
 
@@ -61,7 +61,7 @@ describe("policy", () => {
   });
 
   it("should validate various wildcards", () => {
-    let policyicy = new Policy();
+    let policy = new Policy();
 
     policy.allow("admin_*", "something_*", "hold_*");
     policy.deny("admin_john", "something_*", "hold_it");
@@ -72,7 +72,7 @@ describe("policy", () => {
   });
 
   it("should prefer deny", () => {
-    let policyicy = new Policy();
+    let policy = new Policy();
 
     policy.allow("*", "*", "*");
     policy.deny("guest", "secret", "*");
@@ -83,7 +83,7 @@ describe("policy", () => {
   });
 
   it("should not allow invalid pattern", () => {
-    let policyicy = new Policy();
+    let policy = new Policy();
     assert.throws(() => {
       policy.allow();
     });
@@ -100,9 +100,9 @@ describe("policy", () => {
 
   describe("append", () => {
     it("should append two policy", () => {
-      let policyicy = new Policy();
+      let policy = new Policy();
       policy.allow("*", "*", "*");
-      let policyicy2 = new Policy();
+      let policy2 = new Policy();
       policy2.deny("guest", "secret", "*");
 
       policy.append(policy2);
