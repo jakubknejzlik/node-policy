@@ -1,7 +1,7 @@
 {
   "name": "policy",
   "description": "Library for controlling access to resources with policy documents",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "license": "MIT",
   "keywords": [
     "acl",
